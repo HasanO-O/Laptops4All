@@ -13,7 +13,7 @@
     margin-left: 200px; /* Reset margin */
       margin-top:20px;
   }
-  img {
+  .col-2 img {
     width: 100%; /* Make the image take up full width */
     height: auto; /* Auto adjust height */
     margin-left: 200px; /* Reset margin */
@@ -28,7 +28,7 @@
   .col-1 {
     width: 68%; /* Adjust width as needed */
   }
-  img {
+  .col-2 img {
     max-width: 100%; /* Keep the image within its container */
     height: auto; /* Auto adjust height */
   }
