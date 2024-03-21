@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="ICON.png">
+    <title>Account</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+</head>
+<body id="accountbody">
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="LOGO.png" height="100px">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">HOME<ion-icon name="home" style="display: inline-block;font-size: 20px;vertical-align: middle;font-weight: bolder;padding-left: 5px;padding-bottom: 5px;"></ion-icon></a></li>
+                    <li><a href="products.html">PRODUCTS<ion-icon name="bag" style="display: inline-block;font-size: 20px;vertical-align: middle;font-weight: bolder;padding-left: 5px;padding-bottom: 5px;"></ion-icon></a></li>
+                    <li><a href="cart.html">CART<ion-icon name="cart" style="display: inline-block;font-size: 20px;vertical-align: middle;font-weight: bolder;padding-left: 5px;padding-bottom: 2px;"></ion-icon></a></li>
+                    <li><a href="contact.html">CONTACT<ion-icon name="people" style="display: inline-block;font-size: 20px;vertical-align: middle;font-weight: bolder;padding-left: 5px;
+                    padding-bottom: 2px;"></ion-icon></a></li>
+                    <li><a href="about.html">ABOUT<ion-icon name="information-circle" style="display: inline-block;font-size: 20px;vertical-align: middle;font-weight: bolder;padding-left: 5px;padding-bottom: 2px;"></ion-icon></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="account" >
+            <div class="about" >
+                            
+                            
+                            <br>
+                            <br>
+                                <div id="upper" style="margin-left: 10px;background-color: rgb(0, 0, 0,0.5);">
+                                <form action="https://docs.google.com/forms/d/e/1FAIpQLSfeduszUs4zTqwboeoaQoTbSxbjju6vSgnUgGGadX5XKAOVgg/viewform?usp=sf_link" method="get" class="one">
+                            <span>First Name:</span>
+                            <input type="text" placeholder=""><br>
+                            <br>
+                            <span>Middle Name:</span>
+                            <input type="text" placeholder="">
+                            <br><br>
+                            <span>Last Name:</span>
+                            <input type="text" placeholder=""><br>
+                            <br>
+                            <span>Profession:</span>
+                            <input  type="text" placeholder="">
+                            <br><br>
+                            <div>Gender:
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="male" style="color: rgb(95, 236, 255);">&nbsp;Male<ion-icon name="male" style="color:rgb(95, 236, 255)"></ion-icon></label>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="female" style="color: rgb(255, 173, 255);">&nbsp;Female<ion-icon name="female" style="color:rgb(255, 173, 255)"></ion-icon></label>
+                            </div>
+                            <br>
+                            <span>Date of Birth:</span>
+                            <input  type="date" placeholder="">
+                            <br><br>
+                            <span>E-mail address:</span>
+                            <input type="email" placeholder="" style="background: rgb(0, 0, 0,0.4);padding-bottom: 0;margin: 10px;margin-top: 15px;font-size: 15px;color: cyan;" ><br>
+                            <br>
+                            <span style=>Phone number:</span>
+                            <input type="tel" placeholder="" style="background: rgb(0, 0, 0,0.4);padding-bottom: 0;font-size: 15px;color: cyan;"><br>
+                            <br>
+                            <div class="dropdown">
+                                <label for="products">Select Product(s):</label><br>
+                                <select id="products" multiple>
+                                  <option value="product1">Product1</option>
+                                  <option value="product2">Product2</option>
+                                  <option value="product3">product3</option>
+                                </select>
+                                <p style="font-size: 1em;font-style: italic;">For multiple options:[Mobile/Tablet:Hold][Windows:Ctrl][MacOS:Cmd]</p>
+                              </div><br>
+                            <br>
+                    </div>
+                    <div id="other" style="background-color: rgb(0, 0, 0,0.5);">
+                            <span>Billing Address:</span><br>
+                            <textarea rows="6" style="width: 400px;"></textarea><br>
+                            <br>
+                            <span>Shipping Address:</span><br>
+                            <textarea rows="6" style="width: 400px;"></textarea><br>
+                            <br>
+                            
+                            <button type="submit" id="chngbtn" style="margin-left: 20px;">
+                                Proceed to Payment
+                           </button>
+                           <button type="reset" id="chngbtn2" style="margin-left: 10px;" >
+                            Clear Form
+                       </button><br><br>
+                       <p style="font-size: 1em;font-style: italic;margin-left: 20px;">*Clear the form after payment if it does not reset automatically</p>
+                        </div>
+                        </form>
+                    </div>
+                    
+                    </form>
+                    
+            </div>
+        </div>
+
+    </div>
+    <script style="display: none;" type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script style="display: none;" nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>

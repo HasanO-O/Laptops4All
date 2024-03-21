@@ -1,0 +1,767 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: fit-content;
+    align-items: stretch;
+    min-width: fit-content;
+    display: inline-block;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(126, 126, 126, 0.1);
+    position: sticky;
+    top: 0;
+    animation: appear 2s ease;
+    z-index: 100;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.2), 3px 3px 6px rgba(0, 0, 0, 0.9);
+    margin: 0;
+}
+
+nav {
+    flex: 1;
+    margin: 0;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+    transition: background-color 0.5s;
+    padding: 10px 10px;
+}
+
+nav ul li::after {
+    content: '';
+    width: 0%;
+    height: 5px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+    background-color: transparent;
+}
+
+nav ul li a {
+    color: cyan;
+}
+
+nav ul li:hover {
+    background-color: rgb(19, 19, 19);
+}
+
+nav ul li a:hover {
+    color: white;
+    transition: color 0.5s;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.1), 2px 2px 4px rgba(255, 255, 255, 0.1), 3px 3px 6px rgba(255, 255, 255, 0.1);
+}
+
+nav ul li:hover::after {
+    width: calc(100% + 40px);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+}
+
+.container {
+    min-width: 100%;
+    margin-bottom: 0;
+    display: flexbox;
+}
+
+.row {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-basis: 50%;
+    display: flex;
+}
+
+.col-1 {
+    flex-basis: 50%;
+    min-width: 100vh;
+    text-align: left;
+    display: inline;
+
+}
+.col-2{
+    display: flex;
+    min-width: 100vh;
+    flex-basis: 50%;
+}
+.col-2 img {
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 54px 55px, rgba(0, 0, 0, 0.7) 0px -12px 30px, rgba(0, 0, 0, 0.7) 0px 4px 6px, rgba(0, 0, 0, 0.7) 0px 12px 13px, rgba(0, 0, 0, 0.7) 0px -3px 5px;
+    left: 0;
+    opacity: 0;
+    animation: slideright 1.5s ease forwards;
+}
+
+.col-1 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 30px;
+    background: linear-gradient(to top, rgb(0, 255, 149), rgb(117, 255, 209));
+    background-clip: text;
+    margin-left: 100px;
+    color: transparent;
+    font-weight: bolder;
+}
+
+.col-1 p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.2), 3px 3px 6px rgba(0, 0, 0, 0.2);
+    margin-left: 100px;
+}
+
+.btn {
+    display: inline-block;
+    background: black;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 30px;
+    margin-top: 20px;
+    margin-left: 100px;
+    border-radius: 20px;
+    border: none;
+    transition: background 0.5s;
+    box-shadow: 3px 3px 4px rgba(5, 5, 5, 0.2), 4px 4px 6px rgba(20, 20, 20, 0.2), 5px 5px 8px rgba(22, 22, 22, 0.2);
+}
+
+.btn:hover {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), 4px 4px 6px rgba(0, 0, 0, 0.2), 5px 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+#btntxt {
+    color: white;
+    transition: 0.5s;
+}
+
+#btntxt:hover {
+    background: linear-gradient(90deg, #ff0000, #ff8000, #FFFF00, #00FF00, #0000FF, #8B00FF, #ff00ff, #ff0000, #ff8000, #ffff00);
+    background-clip: text;
+    color: transparent;
+    background-size: 600% 600%;
+    animation: rainbowtext 5s linear infinite;
+}
+
+#homebody {
+    background: radial-gradient(#5e5e5e, rgb(52, 52, 52), rgb(22, 22, 22));
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    align-items: stretch;
+    font-family: Poppins;
+    background-attachment:fixed ;
+    overflow: hidden;
+    display: flex;
+    flex-basis: 50%;
+}
+#contactbody {
+    background: radial-gradient(#5e5e5e, rgb(52, 52, 52), rgb(22, 22, 22) );
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:fit-content;
+    overflow-x: hidden;
+    background-attachment:fixed ;
+    font-family: Poppins;
+}
+#productbody {
+    width: 100%;
+    background: linear-gradient(90deg, rgb(20, 20, 20) , rgb(60, 60, 60) , rgb(80, 80, 80) , rgb(60, 60, 60) , rgb(20, 20, 20));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed ;
+    font-family: Poppins;
+    animation: appear 2s ease;
+    height: fit-content;
+}
+#accountbody {
+    background: radial-gradient(#5e5e5e, rgb(52, 52, 52), rgb(22, 22, 22));
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed ;
+    height: fit-content;
+    font-family: Poppins;
+}
+#aboutbody {
+    background: radial-gradient(#5e5e5e, rgb(52, 52, 52), rgb(22, 22, 22));
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Poppins;
+    height: fit-content;
+    background-attachment:fixed ;
+}
+p{
+    color:rgb(255, 255, 255);
+    font-weight: bolder;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold; 
+    padding-right:none;
+}
+.logo img{
+    border-radius: 20px;
+}
+#Welcome {
+    background: linear-gradient(to bottom, rgb(255, 253, 116), rgb(245, 247, 112));
+    background-clip: text;
+    color: transparent;
+    font-size: 60px;
+    margin-top: 75px;
+    text-align: center;
+}
+#productbody p{
+    text-align: center;
+}
+.col-1{
+    min-width: 100vh;
+    text-align: left;
+    margin-top: 1%;
+}
+#ourself2 {
+    background: linear-gradient(to top, rgb(102, 212, 255), rgb(245, 85, 240));
+    background-clip: text;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: transparent;
+    text-align: center;
+}
+#ourself1{
+    background: rgb(0, 0, 0,0.6);
+    color: gold;
+    text-align: center;
+    padding: 10px;
+}
+.icons{
+    font-size: 50px;
+    text-align: center;
+}
+.contact-col{
+    display: flex;
+    flex-basis: 100%;
+    box-shadow: 3px 3px 4px rgba(5, 5, 5, 0.2), 4px 4px 6px rgba(20, 20, 20, 0.2), 5px 5px 8px rgba(22, 22, 22, 0.2); 
+}
+.contact-col .p1{
+    width: 60%; 
+}
+#contactbody .container{
+    animation: appear 2s ease ;
+}
+.contact-col .p1 .up{
+    background: rgb(0, 0, 0,0.4);
+    width: 90%;
+    border:1px solid #ccc;
+    height: fit-content;
+    padding:17px;
+}
+
+.contact-col h1{
+    margin-left: 20px;
+    background: linear-gradient(to bottom, rgb(229, 255, 0), rgb(255, 221, 0));
+    background-clip: text;
+    color: transparent;
+}
+.contact-col h2{
+    color: rgb(68, 211, 255);
+}
+.contact-col input{
+    font-size: 15px;
+}
+.contact-col p{
+    color: white;
+    font-size: 1.0em;
+}
+.o2bg{
+    background: rgb(0,0,0,0.6);
+}
+.query{
+    background: black;
+    border:1px solid #ccc;
+    padding: 20px;
+    color: white;
+    width:90%;
+    height: 100;
+    text-align: left;
+    align-items: stretch;
+}
+.form{
+    border: 1px solid hsl(0, 0%, 70%);
+    background: rgb(0,0,0,0.7);
+    margin-right: 0;
+    height: 100;
+    color: rgb(68, 211, 255);
+    font-size: 25px ;
+    font-weight: bold;
+    margin-top: 50px;
+    width: 100vh;
+}
+.form input{
+    padding: 2px 4px;
+    width: 95%;
+    margin: 10px 12px;
+}
+.form textarea{
+    padding: 2px 4px;
+    width: 95%;
+    margin: 10px 12px;    
+}
+.form span{
+    padding: 2px 4px;
+    width: 95%;
+    margin: 10px 12px;   
+}
+.form button{
+    padding: 2px 4px;
+    margin: 10px 12px;   
+    margin-left: 100px;
+}
+#icon{
+    font-size: 30px;
+    color:lightgray;
+}
+input{
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    color:white;
+    font-family: Poppins;
+    padding-bottom: 5px;
+    outline: none;
+}
+textarea{
+    border: 1px solid #ccc;
+    background: transparent;
+    color:white;
+    font-family: Poppins;
+    outline: none;
+}
+#bt1{
+    border: 1px solid #ccc;
+    background: transparent;
+    color:gray;
+    font-family: Poppins;
+    outline: none;
+}
+#bt1:hover{
+    border: 1px solid #ccc;
+    background: rgb(66, 66, 66);
+    color:lightgray;
+    font-family: Poppins;
+    outline: none;
+    transition: color 0.5s,background 0.5s;
+}
+#bt2{
+
+    border: 1px solid #ccc;
+    background: transparent;
+    color:lightgreen;
+    font-family: Poppins;
+    outline: none;
+}
+#bt2:hover{
+    border: 1px solid #ccc;
+    background: darkgreen;
+    color:rgb(38, 255, 0);
+    font-family: Poppins;
+    outline: none;
+    transition: color 0.5s,background 0.5s;
+}
+@keyframes slideright {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.col-1{
+    bottom :0;
+    animation: slideUp 1.5s ease forwards;
+}
+@keyframes appear{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.about-col {
+    animation: appear 2s ease ;
+    box-shadow: 3px 3px 4px rgba(5, 5, 5, 0.2), 4px 4px 6px rgba(20, 20, 20, 0.2), 5px 5px 8px rgba(22, 22, 22, 0.2); 
+    width: 100vh;
+}
+.about-col h1{
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.2), 3px 3px 6px rgba(0, 0, 0, 0.2); 
+}
+#accountbody .container #hi{
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    display: flex;
+    background: rgb(0, 0, 0,0.4);
+}
+#accountbody .about h1{
+    font-size: 30px;
+    color: white;
+}
+#accountbody .about h3{
+    background: linear-gradient(360deg,cyan,cyan,cyan,rgb(0, 157, 255),blue,blue);
+    background-clip: text;
+    color: transparent;
+    background-size: 300% 300%;
+    text-align: center;
+    animation: rainbowtext 2s linear forwards;
+}
+#accountbody .about #hi img{
+    background:rgb(255,255,255,0.8);
+    border: 5px solid;
+    border-radius: 100%;
+    border-color:#a7a7a7;
+    max-width: 50%;
+    min-width: 130px;
+}
+.account{
+    animation: appear 1.5s ease ;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    min-height: 100%;
+}
+.account .about{
+    flex-basis: 100%;
+    display: flex;
+    background: rgb(0, 0, 0,0.6);
+    width: fit-content;
+    text-align: left;
+    padding: 50px;
+    font-size: 20px;
+    border: cyan 3px solid;
+    height: fit-content;
+}
+.about-col hr{
+    height: 10px;
+    background-color: lightskyblue;
+    margin-top: 40px;
+    border: none;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.account .about form{
+    width: 100%;
+    margin: 10px;
+    margin-right: 70px;
+    color:white;
+}
+.account #back{
+    background-color: rgb(0, 0, 0,0.4);
+    width: 20%;
+    border:inset 5px white;
+    padding: 30px;
+    margin-right: 10px;
+}
+.account form input{
+    background: rgb(0, 0, 0,0.4);
+    padding-bottom: 0;
+    font-size: 15px;
+    color: cyan;
+}
+input[type="radio"]:checked + label {
+    display: none;
+}
+input[type="radio"] {
+    display: none;
+}
+#chngbtn{
+    color: white;
+    background-color: gray;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    border: 2px solid cyan;
+    font-size: 15px;
+    font-family: Poppins;
+    transition: 0.5s;
+}
+#chngbtn:hover{
+    background: black;
+    color:cyan;
+}
+#chngbtn2{
+    color: white;
+    background-color: gray;
+    padding: 10px;
+    width: 180px;
+    border-radius: 10px;
+    border: 2px solid yellow;
+    font-size: 15px;
+    font-family: Poppins;
+    transition: 0.5s;
+}
+#chngbtn2:hover{
+    background: black;
+    color:rgb(255, 255, 0);
+}
+.account {
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.about {
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%;
+    height: fit-content;
+}
+
+div #upper{
+    flex-basis: 50%;
+    margin-right: 0px;
+    padding: 20px;
+}
+div #other{
+    flex-basis: 50%;
+    color: white;
+    padding: 21px;
+}
+div #other textarea{
+    color: aqua;
+    font-size: 15px;
+    background: rgb(0, 0, 0,0.4);
+}
+#prefer{
+    background-color: black;
+    text-align: center;
+    font-size: 21px;
+}
+#prefer th{
+    border:none;
+    padding: 5px;
+    font-size: 25px;
+}
+#prefer table{
+    padding: 10px;
+}
+#prefer td {
+    font-weight: bolder;
+    background-color: blue;
+    transition: 0.5s;
+    border: none;
+}
+#prefer td:hover{
+    background: rgb(62, 175, 255);
+}
+#productbody hr{
+        height: 10px;
+        background-color: rgb(227, 227, 227);
+        border: none;
+        margin-bottom: 20px;
+        margin-left: 0%;
+        margin-right: 0%;
+}
+#link a{
+    color: #8a8afa;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    margin:10px;
+    background-color: black;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+#link a:hover{
+    color:lightblue;
+    background-color: rgb(74, 74, 74);
+}
+#link{
+    background-color: rgb(24, 24, 24);
+    border: 3px solid white;
+    padding: 5px;
+}
+#link h1{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+#tableh {
+  background: linear-gradient(90deg,#ff0000,#ff8000,#FFFF00,#00FF00,#0000FF,#8B00FF,#ff00ff,#ff0000,#ff8000,#FFFF00,#00ff00,#0000FF,#ffff00,#00FF00,#00FF00);
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: rainbowtext 5s linear infinite;
+}
+@keyframes rainbowtext { 
+    0%{background-position:0% 0%}
+    50%{background-position:50% 50%}
+    100%{background-position:100% 100%}
+}
+#gaming {
+    background-color: rgb(0, 0, 0,0.6);
+    padding: 20px;
+}
+#ultra{
+    background-color: rgb(0, 0, 0,0.6);
+    padding: 20px;
+}
+#two {
+    background-color: rgb(0, 0, 0,0.6);
+    padding: 20px;
+}
+#Business{
+    background-color: rgb(0, 0, 0,0.6);
+    padding: 20px;
+}
+#Work{
+    background-color: rgb(0, 0, 0,0.6);
+    padding: 20px;
+}
+#Chrome{
+    background-color: rgb(0, 0, 0,0.6);
+    padding: 20px;
+}
+#Budget{
+    background-color: rgb(0, 0, 0,0.6);
+    padding: 20px;
+}
+#Rugged{
+    background-color: rgb(0, 0, 0,0.6);
+    padding: 20px;
+}
+#Multi{
+    background-color: rgb(0, 0, 0,0.6);
+    padding: 20px;
+}
+#Student{
+    background-color: rgb(0, 0, 0,0.6);
+    padding: 20px;
+}
+.best h1{
+    color: cyan;
+    text-align: center;
+    text-decoration: none;
+}
+.best p{
+    text-align: center;
+    font-style: italic;
+}
+#items {
+    display: flex;
+    padding: 50px;
+}
+#items h1{
+    text-align: left;
+    color: gold;
+    text-decoration: none;
+}
+#items p{
+    color: beige;
+    text-decoration: none;
+    text-align: left;
+    font-style: normal;
+    font-weight: 300;
+    
+}
+#items img{
+    border: 7px solid lightgray;
+    border-radius: 10px;
+}
+#details{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+#details a{
+    color:yellow;
+    background-color: #3d3d3d;
+    margin-left: 10px;
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.5s;
+}
+.best{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 10px;
+    border: 3px solid gray;
+    border-top: none;
+}
+.meaning{
+    background-color: rgb(0,0,0,0.7);
+    border-left: 3px solid gray;
+    border-right: 3px solid gray;
+}
+.meaning p{
+    text-align: center;
+    color: lightgreen;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: 400;
+}
+#details a:hover{
+    background-color: rgb(255, 255, 255,0.4);
+}
+.content{
+    background-color: black;
+    padding: 10px;
+    border: 3px solid gray;
+    border-bottom: none;
+}
+.content h2{
+    background: linear-gradient(90deg,#ff0000,#ff8000,#FFFF00,#00FF00,#0000FF,#8B00FF,#ff00ff,#ff0000,#ff8000,#FFFF00,#00ff00,#0000FF,#ffff00,#00FF00,#00FF00);
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 200%;
+    text-align: center;
+    font-size: 50px;
+    animation: rainbowtext 3s linear infinite;
+}
+#products {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  #products option {
+    padding: 5px 10px;
+  }
+  
+  #products option:checked {
+    background-color: #f0f0f0;
+  }
