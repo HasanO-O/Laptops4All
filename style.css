@@ -7,16 +7,16 @@
 @media only screen and (max-width: 600px) {
   .col-2 {
     width: 50%; /* Make the column take up 50% of the width */
-    margin-left: 25%; /* Center the column */
   }
   .col-1 {
     width: 100%; /* Make the column take up full width */
-    margin-left: 0; /* Reset margin */
+    margin-left: 200px; /* Reset margin */
+      margin-top:20px;
   }
   img {
     width: 100%; /* Make the image take up full width */
     height: auto; /* Auto adjust height */
-    margin-left: 0; /* Reset margin */
+    margin-left: 200px; /* Reset margin */
   }
 }
 
@@ -24,16 +24,13 @@
 @media only screen and (min-width: 601px) {
   .col-2 {
     width: 30%; /* Adjust width as needed */
-    margin-left: 2%; /* Adjust margin for spacing */
   }
   .col-1 {
     width: 68%; /* Adjust width as needed */
-    margin-left: 0; /* Reset margin */
   }
   img {
     max-width: 100%; /* Keep the image within its container */
     height: auto; /* Auto adjust height */
-    margin-left: 0; /* Reset margin */
   }
 }
 
