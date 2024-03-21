@@ -132,6 +132,7 @@ a {
     text-align: left;
     display: inline;
     overflow: hidden; 
+    margin-left:100px;
 }
 .col-2{
     display: flex;
