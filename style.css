@@ -151,16 +151,16 @@ a {
 }
 
 #btntxt {
-    color: white;
+    background: linear-gradient(90deg,gold,yellow,rgb(255, 255, 74),rgb(255, 255, 155),rgb(255, 255, 74),yellow,gold,gold);
+    background-clip: text;
+    color: transparent;
+    background-size: 600% 600%;
+    animation: rainbowtext 4s linear infinite;
     transition: 0.5s;
 }
 
 #btntxt:hover {
-    background: linear-gradient(90deg, #ff0000, #ff8000, #FFFF00, #00FF00, #0000FF, #8B00FF, #ff00ff, #ff0000, #ff8000, #ffff00);
-    background-clip: text;
-    color: transparent;
-    background-size: 600% 600%;
-    animation: rainbowtext 5s linear infinite;
+    color: aqua;
 }
 
 #homebody {
@@ -725,7 +725,7 @@ div #other textarea{
 }
 .meaning p{
     text-align: center;
-    color: lightgreen;
+    color: rgb(255, 255, 138);
     padding: 15px;
     font-size: 25px;
     font-weight: 400;
