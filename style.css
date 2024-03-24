@@ -3,7 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+@media only screen and (max-width:1000px) {
+    .col-1 {
+        padding-top: 10%;
+    }
+}
 body {
     min-height: fit-content;
     align-items: stretch;
